@@ -1,10 +1,21 @@
+largest = None
+smallest = None
 
-# ******************************
-# Make your Code
-# ******************************
+while True:
+    num = input("Enter a number: ")
+    if num == 'stop':
+        break
+    try:
+        n = int(num)
+    except:
+        print('Invalid input')
+        continue
+    if largest is None or largest < n:
+        largest = n
+    elif smallest is None or smallest > n:
+        smallest = n
+    elif n < smallest:
+        smallest = n
 
-
-# Requirement
-# No need to use list
-# All input values are taken one by one separatively.
-###
+print('Maximum is',largest)
+print('Minimum is',smallest)
